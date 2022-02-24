@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SheetService } from './sheet.service';
+import { SheetService } from '../src/sheet/sheet.service';
 
 describe('SheetService', () => {
   let service: SheetService;
