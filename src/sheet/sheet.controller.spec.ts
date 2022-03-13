@@ -24,6 +24,8 @@ describe('SheetController', () => {
     it('should return a long sting of stats', async () => {
       let result: 'test';
       jest.spyOn(service, 'getStats').mockImplementation(() => result);
+
+      expect(controller.getStats()).toBe(result);
     });
   });
 });
