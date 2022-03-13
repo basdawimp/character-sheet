@@ -15,42 +15,12 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/sheet (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/sheet')
       .expect(200)
       .expect(
-        `name: one
-        strength: 0
-        agility: 0
-        fighting: 0
-        awareness: 0
-        stamina: 0
-        dexterity: 0
-        interllect: 0
-        
-        dodge: 0
-        parry: 0
-        fortitude: 0
-        toughness: 0
-        will: 0
-        
-        acrobatics: 0
-        athletics: 0
-        closeCombat: 0
-        deception: 0
-        expertise: 0
-        insight: 0
-        intimidation: 0
-        investigation: 0
-        perception: 0
-        persuasion: 0
-        rangedCombat: 0
-        slightOfHand: 0
-        stealth: 0
-        technology: 0
-        treatment: 0
-        vehicles: 0`,
+        `name: one\nstrength: 0\nagility: 0\nfighting: 0\nawareness: 0\nstamina: 0\ndexterity: 0\ninterllect: 0\n\ndodge: 0\nparry: 0\nfortitude: 0\ntoughness: 0\nwill: 0\n\nacrobatics: 0\nathletics: 0\ncloseCombat: 0\ndeception: 0\nexpertise: 0\ninsight: 0\nintimidation: 0\ninvestigation: 0\nperception: 0\npersuasion: 0\nrangedCombat: 0\nslightOfHand: 0\nstealth: 0\ntechnology: 0\ntreatment: 0\nvehicles: 0`,
       );
   });
 });
