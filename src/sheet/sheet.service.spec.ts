@@ -17,10 +17,39 @@ describe('SheetService', () => {
   });
 
   describe('getStats', () => {
-    it('returns correct stats', async () => {
-      expect(service.getStats()).toEqual(
-        `name: one\nstrength: 0\nagility: 0\nfighting: 0\nawareness: 0\nstamina: 0\ndexterity: 0\ninterllect: 0\n\ndodge: 0\nparry: 0\nfortitude: 0\ntoughness: 0\nwill: 0\n\nacrobatics: 0\nathletics: 0\ncloseCombat: 0\ndeception: 0\nexpertise: 0\ninsight: 0\nintimidation: 0\ninvestigation: 0\nperception: 0\npersuasion: 0\nrangedCombat: 0\nslightOfHand: 0\nstealth: 0\ntechnology: 0\ntreatment: 0\nvehicles: 0`,
-      );
+    it('returns object contains attribute names with assosiated value', () => {
+      expect(service.getStats).toMatchObject({
+        strength: expect.any(Number),
+        agility: expect.any(Number),
+        fighting: expect.any(Number),
+        awareness: expect.any(Number),
+        stamina: expect.any(Number),
+        dexterity: expect.any(Number),
+        interllect: expect.any(Number),
+
+        dodge: expect.any(Number),
+        parry: expect.any(Number),
+        fortitude: expect.any(Number),
+        toughness: expect.any(Number),
+        will: expect.any(Number),
+
+        acrobatics: expect.any(Number),
+        athletics: expect.any(Number),
+        closeCombat: expect.any(Number),
+        deception: expect.any(Number),
+        expertise: expect.any(Number),
+        insight: expect.any(Number),
+        intimidation: expect.any(Number),
+        investigation: expect.any(Number),
+        perception: expect.any(Number),
+        persuasion: expect.any(Number),
+        rangedCombat: expect.any(Number),
+        slightOfHand: expect.any(Number),
+        stealth: expect.any(Number),
+        technology: expect.any(Number),
+        treatment: expect.any(Number),
+        vehicles: expect.any(Number),
+      });
     });
   });
 });
