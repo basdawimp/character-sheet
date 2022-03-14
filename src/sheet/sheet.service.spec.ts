@@ -55,5 +55,7 @@ describe('SheetService', () => {
         vehicles: expect.any(Number),
       });
     });
+
+    /*it('attribute values mach those saved in file');*/
   });
 });
