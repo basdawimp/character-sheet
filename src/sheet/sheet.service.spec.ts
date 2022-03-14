@@ -17,8 +17,12 @@ describe('SheetService', () => {
   });
 
   describe('getStats', () => {
-    it('returns object contains attribute names with assosiated value', () => {
-      expect(service.getStats).toMatchObject({
+    it('should be defined', () => {
+      expect(service.getStats()).toBeDefined();
+    });
+
+    it('returns object contains attribute names with assosiated values', () => {
+      expect(service.getStats()).toMatchObject({
         strength: expect.any(Number),
         agility: expect.any(Number),
         fighting: expect.any(Number),
