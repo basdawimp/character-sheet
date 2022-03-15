@@ -42,7 +42,19 @@ export class SheetService {
   }
 
   displayStats() {
-    const statsAsString = stringify(this.getStats());
+    let statsAsString = `name: one`;
+    const statsAsArray = stringify(this.getStats()).split(/[&,=]+/);
+    for (let i = 0; i < statsAsArray.length; i++) {
+      statsAsArray[i] = statsAsArray[i] + `: ` + statsAsArray[i + 1];
+      statsAsArray.splice(i + 1, 1);
+    }
+
+    statsAsArray.splice(7, 0, ``);
+    statsAsArray.splice(13, 0, ``);
+
+    for (let i = 0; i < statsAsArray.length; i++) {
+      statsAsString = statsAsString + `\n` + statsAsArray[i];
+    }
 
     return statsAsString;
   }
