@@ -58,4 +58,10 @@ describe('SheetService', () => {
 
     /*it('attribute values mach those saved in file');*/
   });
+
+  describe('displayStats', () => {
+    it('should be defined', () => {
+      expect(service.displayStats()).toBeDefined();
+    });
+  });
 });
