@@ -63,5 +63,9 @@ describe('SheetService', () => {
     it('should be defined', () => {
       expect(service.displayStats()).toBeDefined();
     });
+
+    it('returns string', () => {
+      expect(service.displayStats()).toEqual(expect.any(String));
+    });
   });
 });
