@@ -20,12 +20,12 @@ describe('SheetController', () => {
     expect(controller).toBeDefined();
   });
 
-  describe('getStats', () => {
-    it('should return a long sting of stats', async () => {
-      let result: 'test';
+  /*describe('getStats', () => {
+    it('should return a sting', async () => {
+      let result: ['test'];
       jest.spyOn(service, 'getStats').mockImplementation(() => result);
 
       expect(controller.getStats()).toBe(result);
     });
-  });
+  });*/
 });

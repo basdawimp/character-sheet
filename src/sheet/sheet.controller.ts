@@ -5,16 +5,16 @@ import { SheetService } from './sheet.service';
 export class SheetController {
   constructor(private readonly sheetService: SheetService) {}
 
-  setStats() {
+  /*setStats() {
     return this.sheetService.setStats();
-  }
+  }*/
 
   @Get()
   getStats() {
-    return this.sheetService.getStats();
+    return this.sheetService.displayStats();
   }
 
-  @Get(':profile')
+  /*@Get(':profile')
   getStatsByProfile(@Param('profile') profileName) {
     return this.sheetService.getStatsByProfile(profileName);
   }
@@ -25,5 +25,5 @@ export class SheetController {
 
   getProfile() {
     return this.sheetService.getProfile();
-  }
+  }*/
 }

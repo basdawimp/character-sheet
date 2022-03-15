@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import { stringify } from 'querystring';
 
 @Injectable()
 export class SheetService {
-  setStats() {
+  /*setStats() {
 
-  }
+  }*/
 
   getStats() {
     return {
@@ -59,6 +60,8 @@ export class SheetService {
     return statsAsString;
   }
 
+  /*getStatsByProfile(profileName) {
+
   }
 
   setProfile() {
@@ -67,5 +70,5 @@ export class SheetService {
 
   getProfile() {
 
-  }
+  }*/
 }
