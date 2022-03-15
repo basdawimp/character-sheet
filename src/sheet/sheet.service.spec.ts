@@ -67,5 +67,9 @@ describe('SheetService', () => {
     it('returns string', () => {
       expect(service.displayStats()).toEqual(expect.any(String));
     });
+
+    it('return string contains new lines', () => {
+      expect(service.displayStats()).toEqual(expect.stringContaining('\n'));
+    });
   });
 });
