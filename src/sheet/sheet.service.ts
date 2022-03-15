@@ -41,7 +41,11 @@ export class SheetService {
     };
   }
 
-  getStatsByProfile(profileName) {
+  displayStats() {
+    const statsAsString = stringify(this.getStats());
+
+    return statsAsString;
+  }
 
   }
 
